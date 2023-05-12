@@ -6,7 +6,8 @@ class Product:
 
     def __init__(self, id, title, description, price, available_date, quantity, image_uri, is_special, category, tags,
                  created_time, modified_time):
-        self.id = id
+        self.id = id,
+        self.user_id = user_id
         self.title = title,
         self.description = description
         self.price = price
@@ -22,5 +23,5 @@ class Product:
 
 now = datetime.now()
 tags = {'type': 'mug', 'sport': 'NBA'}
-product = Product(1, 'Basketball mug', 'Description', 150, now, 120, 's3://somewhere', False, 'MUG', json.dumps(tags), now,
+product = Product(1, 1, 'Basketball mug', 'Description', 150, now, 120, 's3://somewhere', False, 'MUG', json.dumps(tags), now,
                   now)
